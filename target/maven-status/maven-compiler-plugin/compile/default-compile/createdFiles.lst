@@ -1,4 +1,3 @@
-com\example\thymeleaf\controller\IndexController.class
 com\example\thymeleaf\entity\Address.class
 com\example\thymeleaf\entity\Student.class
 com\example\thymeleaf\dto\StudentResponseDTO.class
