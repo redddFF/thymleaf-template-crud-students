@@ -4,7 +4,7 @@
         <div layout:fragment="content">
             <h1 class="text-center mb-4">New student</h1>
 
-            <form method="POST" th:action="@{/students/new}" class="mx-auto w-50" th:object="${student}">
+            <form method="POST" th:action="@{/new}" class="mx-auto w-50" th:object="${student}">
                 <th:block th:include="fragment/error-message.html"></th:block>
                 <fieldset>
                     <legend>Personal Informations</legend>
@@ -71,7 +71,7 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <a th:href="@{/students}" class="btn btn-outline-secondary w-100">
+                        <a th:href="@{/}" class="btn btn-outline-secondary w-100">
                             Back
                         </a>
                     </div>

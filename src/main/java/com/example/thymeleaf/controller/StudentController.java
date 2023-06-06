@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
-@RequestMapping("/students")
+@RequestMapping("/")
 public class StudentController {
 
     private StudentService studentService;
@@ -43,7 +43,7 @@ public class StudentController {
 
         this.studentService.save(StudentMapper.toEntity(studentDTO));
         attributes.addFlashAttribute("message", "User registered successfully!");
-        return "redirect:/students";
+        return "redirect:/";
     }
 
     @GetMapping("/{id}")
@@ -61,14 +61,14 @@ public class StudentController {
 
         this.studentService.update(id, StudentMapper.toEntity(studentDTO));
         attributes.addFlashAttribute("message", "User updated successfully!");
-        return "redirect:/students";
+        return "redirect:/";
     }
 
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable String id, RedirectAttributes attributes) {
         this.studentService.deleteById(id);
         attributes.addFlashAttribute("message", "User deleted successfully!");
-        return "redirect:/students";
+        return "redirect:/";
     }
 
 }
